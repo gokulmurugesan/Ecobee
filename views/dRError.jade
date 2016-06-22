@@ -1,0 +1,14 @@
+extends layout
+
+block script
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+    script(src='/javascripts/bootstrap.min.js')
+    
+block content
+    h1.header Demand Response Report Generator
+    .login-card
+      h2.text-center.text-success Error Encountered
+      form.form-signin(action="/dRRedirect" method="post")             
+        p.error #{error} for #{setName} on #{startDate} between #{startTime} and #{endTime}
+        button#login.btn.btn-success.btn-block.btn-lg.btn-signin(type="submit" value="Submit") Return to Demand Response Details Screen

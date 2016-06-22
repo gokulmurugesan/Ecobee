@@ -1,0 +1,28 @@
+extends layout
+
+block script
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/styles2.css')
+
+block content
+ h1.text-center Demand Response Report Generator
+    .login-card.dRDetails
+      h2.text-center DEMAND RESPONSE DETAILS
+      form.form-signin(action="/generate" method='post')
+        label.left Thermostat Set Name
+        input.form-control(type='text', placeholder='Set Name' name='setName')
+        label.left Demand Response Name
+        input.form-control(type='text', placeholder='Demand Response Name' name='dRName')
+        .divGroup
+          .left
+            label Demand Response Day             
+            input.form-control(type='date', name='date')    
+          div
+            label Start Time  
+            input.form-control(type='time' name='startTime')       
+          .right
+            label End Time        
+            input.form-control(type='time' name='endTime')          
+        button.btn.btn-success.btn-block.btn-lg.btn-signin(type='submit') Generate Report
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/bootstrap.min.js')
