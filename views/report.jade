@@ -1,0 +1,38 @@
+extends layout
+
+block script
+    link(href='/stylesheets/report.css', rel='stylesheet', type='text/css')
+    script(src='/javascripts/jquery.min.js')
+    script(src='http://d3js.org/d3.v3.min.js', type='text/javascript')
+    script(src='http://dimplejs.org/dist/dimple.v2.1.6.min.js', type='text/javascript')
+    script(src='http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js')
+    script(src='/javascripts/jquery.csv.js', type='text/javascript')
+    script(src='/javascripts/charts.js')
+    
+block content
+    h1.title Demand Response (<span class="special">#{demandResponseName}</span>) Summary
+    .details
+        h3.detail Ran on <span class="special">#{setName}</span> on <span class="special">#{startDate}</span> between <span class="special">#{startTime}</span> - <span class="special">#{endTime}</span>
+        h3#dir.hidden #{demandResponseName}
+    #DutyCycle.chart
+        h1.chartTitle Average Duty Cycle      
+    #LoadkW.chart
+        h1.chartTitle Average Load (kW)
+    #LoadkWh.chart
+        h1.chartTitle Average Load (kWh)
+    #Temperatures.chart
+        h1.chartTitle Average Thermostat Temperatures
+    #Participation.chart
+        h1.chartTitle Demand Response Thermostat Participation
+    .chart
+        h1.chartTitle Demand Response Thermostat ID Participation
+        #ThermostatList
+            #participating.subGroup.span3
+                h3.subGroupTitle Participating
+            #nonParticipating.subGroup.span3
+                h3.subGroupTitle Non Participating
+            #optOut.subGroup.span3
+                h3.subGroupTitle Opt Out
+            #noData.subGroup.span3
+                h3.subGroupTitle No Data
+    button.printBtn(onClick="window.print()" value="Print Report") Print Report

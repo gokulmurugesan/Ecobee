@@ -1,0 +1,250 @@
+body {
+    padding-top: 10px;
+    font-family: 'Segoe UI';
+    background-color: #F9F9F9;
+}
+
+path {
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #AEAEAE;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: none;
+    stroke: steelblue;
+}
+
+.chart {
+    margin-top: 30px;
+}
+
+.chart,
+.focus,
+svg {
+    overflow: visible;
+}
+
+svg {
+    transform: translateX(20px);
+}
+
+div {
+    text-align: center;
+}
+
+h1.chartTitle {
+    color: #333;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 22pt;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.chart {
+    page-break-inside: avoid;
+    padding-top: 20px;
+    background-color: #FFF;
+}
+
+#Participation svg g path {
+    stroke: none;
+}
+
+.x.axis>.domain {
+    stroke: none;
+}
+
+.textTop {
+    font-family: 'Segoe UI';
+    font-size: 12pt;
+    fill: #666;
+}
+
+text {
+    fill: #333;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.textBottom {
+    fill: #444;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.slice path {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+
+.d3-tip {
+    width: 60px;
+    line-height: 1.3;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    padding: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    /*color: #fff;*/
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 12px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+.details {
+    display: block;
+}
+
+.detail {
+    display: block;
+    position:relative;
+    padding: 0 5%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 30px; 
+}   
+
+span.special {
+    color: #3498DB;
+    font-style: italic;
+}
+
+.subGroup.span3 {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20%;
+    margin: 0 2% auto 2%;
+}
+
+.chart p.chartNote {
+    color: #333;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+}
+
+.chart p.chartNote.left {
+    float: left;
+}
+
+.chart p.chartNote.right {
+    float: right;
+}
+
+.chart p.chartNote span {
+    font-size: 1.5em;
+    color: #3498DB; !important
+}
+
+.chartDetails {
+    display: block;
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.chartDetails:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+#ThermostatList {
+    display: block;
+    position: relative;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.chart {    
+    -webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.69);
+    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.69);
+}
+
+.printBtn {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 55px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    padding: 10px 15px;
+    background-color: #3498DB;
+    z-index: 2000px;
+    border: 1px solid #3498DB;
+    border-radius: 20px;
+}
+
+.printBtn:hover {
+    background-color: #3182BD;
+}
+
+.printBtn:focus {
+    outline:0;
+}
+
+
+@media print {
+    body {
+        background-color: #FFF;
+    }
+    
+    .printBtn {
+        display: none; !important
+        visibility: hidden; !important
+    }
+}
